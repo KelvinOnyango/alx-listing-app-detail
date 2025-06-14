@@ -1,29 +1,23 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-interface cardProp {
-  image: string;
-  title: string;
-  description: string;
-  link: string;
-}
-export interface Address {
-  state: string;
-  city: string;
-  country: string;
-}
-
-export interface Offers {
-  bed: string;
-  shower: string;
-  occupants: string;
-}
-
 export interface PropertyProps {
+  id: string;
   name: string;
-  address: Address;
-  rating: number;
-  category: string[];
+  description: string;
   price: number;
-  offers: Offers;
+  rating: number;
   image: string;
-  discount: string;
+  images: string[];
+  address: {
+    street: string;
+    city: string;
+    country: string;
+  };
+  category: string[];
+  reviews: {
+    id: string;
+    name: string;
+    avatar: string;
+    rating: number;
+    comment: string;
+    date: string;
+  }[];
 }
